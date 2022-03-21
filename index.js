@@ -1,4 +1,3 @@
-require("dotenv").config();
 const express = require("express");
 const app = express();
 const bodyParser = require("body-parser");
@@ -57,7 +56,7 @@ app.get("/api/:date_string", (req, res) => {
   });
 });
 
-const listener = app.listen(process.env.PORT, function () {
+const listener = app.listen(port, function () {
   console.log(
     "timestamp-microservice is listening on port " + listener.address().port
   );
